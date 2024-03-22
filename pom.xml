@@ -44,6 +44,13 @@
     -->
 
     <properties>
+      
+        <!-- also in root/pom.xml -->
+        <repositoryName>Peregrine themecleanflex orx0815-fork Release Distribution Repository</repositoryName>
+        <repositoryUrl>https://maven.pkg.github.com/orx0815/themeclean-flex</repositoryUrl>
+        <snapshotRepositoryName>Peregrine themecleanflex orx0815-fork CMS Development Snapshot Repository</snapshotRepositoryName>
+        <snapshotRepositoryUrl>https://maven.pkg.github.com/orx0815/themeclean-flex</snapshotRepositoryUrl>
+        
         <sling.host>localhost</sling.host>
         <sling.port>8080</sling.port>
         <sling.user>admin</sling.user>
@@ -438,4 +445,25 @@
     <module>core</module>
     <module>ui.apps</module>
   </modules>
+  <distributionManagement>
+      <repository>
+          <id>github</id>
+          <name>${repositoryName}</name>
+          <url>${repositoryUrl}</url>
+      </repository>
+      <snapshotRepository>
+          <id>github</id>
+          <name>${snapshotRepositoryName}</name>
+          <url>${snapshotRepositoryUrl}</url>
+      </snapshotRepository>
+  </distributionManagement>
+  <repositories>
+      <repository>
+          <id>github</id>
+          <url>https://maven.pkg.github.com/orx0815/peregrine-cms</url>
+          <snapshots>
+              <enabled>true</enabled>
+          </snapshots>
+      </repository>
+  </repositories>
 </project>
